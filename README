@@ -1,0 +1,21 @@
+recheck - regular expression checker with submatches splitting
+
+It works like this:
+
+» perl recheck.pl 
+S: foo bar baz
+P: (.)
+> f <
+ [f]
+
+S: foo barbaz
+P: (.+)
+> foo barbaz <
+ [foo barbaz]
+
+S: foo barbaz
+P: (.{2})+
+> foo barbaz <
+ [az]
+
+
